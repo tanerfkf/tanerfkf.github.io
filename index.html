@@ -1,89 +1,136 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kurt İletişim - Telefon Tamiri</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: linear-gradient(145deg, #f1f4f9, #d9e2ec);
+      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+      overflow-x: hidden;
       color: #333;
     }
 
     header {
-      background: linear-gradient(to right, #0077ff, #00c6ff);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
       border-bottom-left-radius: 40px;
       border-bottom-right-radius: 40px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
     }
 
     header h1 {
-      font-size: 36px;
+      font-size: 42px;
+      color: #0077ff;
+      font-weight: 600;
       margin-bottom: 10px;
     }
 
+    header p {
+      font-size: 18px;
+      color: #444;
+    }
+
     nav {
-      background: white;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
+      background: #ffffffaa;
       padding: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      backdrop-filter: blur(10px);
       border-radius: 0 0 20px 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
     }
 
     nav a {
       text-decoration: none;
       color: #0077ff;
-      font-weight: bold;
+      font-weight: 500;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #0055cc;
+      color: #0044aa;
     }
 
     .hero {
-      text-align: center;
       padding: 60px 20px;
-      animation: fadeIn 1.5s ease-in;
+      text-align: center;
     }
 
     .hero h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
+      font-size: 36px;
+      margin-bottom: 10px;
     }
 
     .hero p {
       font-size: 18px;
-      color: #555;
       max-width: 600px;
-      margin: auto;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 60px 20px;
+    }
+
+    .service-box {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(15px);
+      border-radius: 30px;
+      width: 260px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-box img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .service-box h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #0077ff;
+    }
+
+    .service-box p {
+      font-size: 15px;
+      color: #444;
     }
 
     .whatsapp-btn {
-      display: block;
-      text-align: center;
-      margin: 40px auto;
+      display: inline-block;
       background: #25D366;
       color: white;
-      padding: 15px 30px;
+      padding: 14px 32px;
       border-radius: 50px;
-      width: max-content;
-      font-size: 18px;
       text-decoration: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      font-weight: bold;
+      margin: 40px auto;
+      display: block;
+      width: max-content;
       transition: 0.3s;
     }
 
@@ -91,25 +138,24 @@
       background: #1ebe5d;
     }
 
-    @keyframes fadeIn {
-      0% {opacity: 0; transform: translateY(20px);}
-      100% {opacity: 1; transform: translateY(0);}
-    }
-
     footer {
       text-align: center;
       padding: 20px;
-      color: #888;
       font-size: 14px;
+      color: #777;
     }
 
+    @keyframes fadeInDown {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>KURT İLETİŞİM</h1>
-    <p>Telefon Tamiri & Profesyonel Hizmet</p>
+    <p>Telefon Tamiri | Hızlı & Güvenilir Servis</p>
   </header>
 
   <nav>
@@ -119,15 +165,33 @@
     <a href="iletisim.html">İletişim</a>
   </nav>
 
-  <div class="hero">
+  <section class="hero">
     <h2>Hoş Geldiniz!</h2>
-    <p>Kurt İletişim olarak iPhone, Samsung ve tüm akıllı telefon modellerinde hızlı, garantili ve kaliteli tamir hizmeti sunuyoruz.</p>
-  </div>
+    <p>iPhone, Samsung ve tüm modeller için uzman teknik servis. Uygun fiyat, kaliteli hizmet!</p>
+  </section>
 
-  <a class="whatsapp-btn" href="https://wa.me/905074995849" target="_blank">WhatsApp ile İletişime Geç</a>
+  <section class="services">
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/100/battery.png" alt="Batarya Değişimi">
+      <h3>Batarya Değişimi</h3>
+      <p>Orijinal batarya ile 30 dakikada değişim.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/100/touchscreen-smartphone.png" alt="Ekran Değişimi">
+      <h3>Ekran Değişimi</h3>
+      <p>Kırık ekranlara elveda! 1 yıl garantili servis.</p>
+    </div>
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios-filled/100/settings.png" alt="Yazılım Sorunları">
+      <h3>Yazılım Desteği</h3>
+      <p>Donma, açılmama gibi tüm yazılım sorunlarına çözüm.</p>
+    </div>
+  </section>
+
+  <a class="whatsapp-btn" href="https://wa.me/905074995849" target="_blank">WhatsApp'tan Hemen Yaz</a>
 
   <footer>
-    © 2025 Kurt İletişim. Tüm hakları saklıdır.
+    © 2025 Kurt İletişim | Tüm Hakları Saklıdır
   </footer>
 
 </body>
