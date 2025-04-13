@@ -1,102 +1,83 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kurt İletişim - Tamir Hizmetleri</title>
+<section class="tamir-hizmetleri">
+  <h2 class="baslik">Tamir Hizmetlerimiz</h2>
+  <div class="hizmet-kartlari">
 
-  <!-- Stil dosyası -->
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f2f2f2;
-    }
-
-    .services-section {
-      padding: 60px 20px;
-      background: linear-gradient(to bottom, #ffffff, #e3f2fd);
-      text-align: center;
-    }
-
-    .section-title {
-      font-size: 34px;
-      font-weight: bold;
-      margin-bottom: 50px;
-      color: #0d47a1;
-    }
-
-    .services-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .service-card {
-      background: white;
-      border-radius: 24px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      max-width: 250px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .service-card img {
-      width: 60px;
-      margin-bottom: 20px;
-    }
-
-    .service-card h3 {
-      font-size: 20px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Tamir Hizmetleri Bölümü -->
-  <section class="services-section">
-    <h2 class="section-title">TAMİR HİZMETLERİ</h2>
-    <div class="services-container">
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Batarya">
-        <h3>Batarya Değişimi</h3>
-        <p>Zayıflamış ve şişmiş bataryalarınız profesyonelce değiştiriliyor.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921220.png" alt="Ekran">
-        <h3>Ekran Değişimi</h3>
-        <p>Kırık ve bozuk ekranlar garantili olarak yenileniyor.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="iPhone">
-        <h3>iPhone Tamiri</h3>
-        <p>Tüm iPhone modelleri için özel yedek parça ve servis.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733590.png" alt="Android">
-        <h3>Android Tamiri</h3>
-        <p>Samsung, Xiaomi, Oppo ve daha fazlası için tamir hizmeti.</p>
-      </div>
-
+    <div class="kart">
+      <img src="https://i.imgur.com/Ori2MZJ.jpg" alt="Ekran Değişimi">
+      <h3>Ekran Değişimi</h3>
+      <p>Kırık veya çalışmayan ekranları hızlıca değiştiriyoruz.</p>
     </div>
-  </section>
 
-</body>
-</html>
+    <div class="kart">
+      <img src="https://i.imgur.com/fW8O9Jc.jpg" alt="Batarya Değişimi">
+      <h3>Batarya Değişimi</h3>
+      <p>Zayıflamış ve şişmiş bataryaları profesyonelce yeniliyoruz.</p>
+    </div>
+
+    <div class="kart">
+      <img src="https://i.imgur.com/kZ5ZFnZ.jpg" alt="iPhone Tamiri">
+      <h3>iPhone Tamiri</h3>
+      <p>Tüm iPhone modelleri için uzman teknik destek.</p>
+    </div>
+
+    <div class="kart">
+      <img src="https://i.imgur.com/XXIfuol.jpg" alt="Android Tamiri">
+      <h3>Android Tamiri</h3>
+      <p>Samsung, Xiaomi, Oppo gibi cihazlara özel servis.</p>
+    </div>
+
+    <div class="kart">
+      <img src="https://i.imgur.com/FGHzfD5.jpg" alt="Arka Cam Değişimi">
+      <h3>Arka Cam Değişimi</h3>
+      <p>Çatlak veya kırık arka camlar orijinaline uygun değiştirilir.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.tamir-hizmetleri {
+  background: #f7f9fc;
+  padding: 60px 20px;
+  text-align: center;
+}
+.baslik {
+  font-size: 34px;
+  color: #2c3e50;
+  margin-bottom: 40px;
+}
+.hizmet-kartlari {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+.kart {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+.kart:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+.kart img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.kart h3 {
+  font-size: 20px;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+.kart p {
+  color: #666;
+  font-size: 14px;
+}
+</style>
