@@ -1,43 +1,102 @@
-<!-- TAMİR HİZMETLERİ BÖLÜMÜ -->
-<section class="services-section">
-  <h2 class="section-title">TAMİR HİZMETLERİ</h2>
-  <div class="services-container">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurt İletişim - Tamir Hizmetleri</title>
 
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/929/929426.png" alt="Ekran" />
-      <h3>Ekran Değişimi</h3>
-      <p>Kırık ya da dokunmayan ekranları orijinal parçalarla değiştiriyoruz.</p>
+  <!-- Stil dosyası -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .services-section {
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 50px;
+      color: #0d47a1;
+    }
+
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card img {
+      width: 60px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tamir Hizmetleri Bölümü -->
+  <section class="services-section">
+    <h2 class="section-title">TAMİR HİZMETLERİ</h2>
+    <div class="services-container">
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Batarya">
+        <h3>Batarya Değişimi</h3>
+        <p>Zayıflamış ve şişmiş bataryalarınız profesyonelce değiştiriliyor.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921220.png" alt="Ekran">
+        <h3>Ekran Değişimi</h3>
+        <p>Kırık ve bozuk ekranlar garantili olarak yenileniyor.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="iPhone">
+        <h3>iPhone Tamiri</h3>
+        <p>Tüm iPhone modelleri için özel yedek parça ve servis.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733590.png" alt="Android">
+        <h3>Android Tamiri</h3>
+        <p>Samsung, Xiaomi, Oppo ve daha fazlası için tamir hizmeti.</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3103/3103446.png" alt="Batarya" />
-      <h3>Batarya Değişimi</h3>
-      <p>Zayıflamış ve şişmiş bataryaları güvenle değiştiriyoruz.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/831/831270.png" alt="iPhone" />
-      <h3>iPhone Tamiri</h3>
-      <p>Tüm iPhone modellerine hızlı ve garantili teknik servis.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Android" />
-      <h3>Android Tamiri</h3>
-      <p>Samsung, Xiaomi, Oppo vb. cihazlar için teknik destek.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Kamera" />
-      <h3>Kamera Onarımı</h3>
-      <p>Ön ve arka kameraları orijinal parçalarla değiştiriyoruz.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3534/3534076.png" alt="Su Teması" />
-      <h3>Su Teması Onarımı</h3>
-      <p>Sıvı teması sonrası cihazları kurtarıyoruz.</p>
-    </div>
-
-  </div>
-</section>
+</body>
+</html>
