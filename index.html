@@ -1,83 +1,132 @@
-<section class="tamir-hizmetleri">
-  <h2 class="baslik">Tamir Hizmetlerimiz</h2>
-  <div class="hizmet-kartlari">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KURT İLETİŞİM</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", sans-serif;
+    }
 
-    <div class="kart">
-      <img src="https://i.imgur.com/Ori2MZJ.jpg" alt="Ekran Değişimi">
-      <h3>Ekran Değişimi</h3>
-      <p>Kırık veya çalışmayan ekranları hızlıca değiştiriyoruz.</p>
+    body {
+      background-color: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: #000;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 20px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 28px;
+      background: #007aff;
+      color: #fff;
+      border-radius: 24px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #005ecb;
+    }
+
+    .services {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 300px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>KURT İLETİŞİM</h1>
+      <p>Zayıflamış ve şişmiş bataryalar, kırık ekranlar ve daha fazlası için profesyonel onarım!</p>
+      <a href="https://wa.me/905074995849" class="btn">Hemen WhatsApp'tan Ulaş</a>
     </div>
+  </header>
 
-    <div class="kart">
-      <img src="https://i.imgur.com/fW8O9Jc.jpg" alt="Batarya Değişimi">
-      <h3>Batarya Değişimi</h3>
-      <p>Zayıflamış ve şişmiş bataryaları profesyonelce yeniliyoruz.</p>
+  <section class="services">
+    <h2>Hizmetlerimiz</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="images/batarya.jpg" alt="Batarya Değişimi">
+        <h3>Batarya Değişimi</h3>
+        <p>Zayıflamış ve şişmiş bataryaları değiştiriyoruz.</p>
+      </div>
+      <div class="card">
+        <img src="images/ekran.jpg" alt="Ekran Değişimi">
+        <h3>Ekran Değişimi</h3>
+        <p>Kırılmış ekranlar, çatlak camlar, orijinal parça garantisi.</p>
+      </div>
+      <div class="card">
+        <img src="images/arkacam.jpg" alt="Arka Cam Değişimi">
+        <h3>Arka Cam Değişimi</h3>
+        <p>iPhone ve Android arka cam değişimi, pürüzsüz sonuç!</p>
+      </div>
     </div>
+  </section>
 
-    <div class="kart">
-      <img src="https://i.imgur.com/kZ5ZFnZ.jpg" alt="iPhone Tamiri">
-      <h3>iPhone Tamiri</h3>
-      <p>Tüm iPhone modelleri için uzman teknik destek.</p>
-    </div>
-
-    <div class="kart">
-      <img src="https://i.imgur.com/XXIfuol.jpg" alt="Android Tamiri">
-      <h3>Android Tamiri</h3>
-      <p>Samsung, Xiaomi, Oppo gibi cihazlara özel servis.</p>
-    </div>
-
-    <div class="kart">
-      <img src="https://i.imgur.com/FGHzfD5.jpg" alt="Arka Cam Değişimi">
-      <h3>Arka Cam Değişimi</h3>
-      <p>Çatlak veya kırık arka camlar orijinaline uygun değiştirilir.</p>
-    </div>
-
-  </div>
-</section>
-
-<style>
-.tamir-hizmetleri {
-  background: #f7f9fc;
-  padding: 60px 20px;
-  text-align: center;
-}
-.baslik {
-  font-size: 34px;
-  color: #2c3e50;
-  margin-bottom: 40px;
-}
-.hizmet-kartlari {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
-}
-.kart {
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-.kart:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-.kart img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin-bottom: 15px;
-}
-.kart h3 {
-  font-size: 20px;
-  color: #34495e;
-  margin-bottom: 10px;
-}
-.kart p {
-  color: #666;
-  font-size: 14px;
-}
-</style>
+  <footer>
+    <p>&copy; 2025 KURT İLETİŞİM | @kurtiletisim41</p>
+  </footer>
+</body>
+</html>
