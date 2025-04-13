@@ -1,93 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Yönetici Girişi - Kurt İletişim</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 0; padding: 0; }
-        .container { max-width: 400px; margin: 100px auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h2 { text-align: center; color: #333; }
-        input[type="text"], input[type="password"], textarea {
-            width: 100%; padding: 10px; margin: 10px 0 20px; border: 1px solid #ccc; border-radius: 5px;
-        }
-        button {
-            padding: 10px 15px; background: #0099cc; color: white; border: none; border-radius: 5px;
-            font-size: 14px; cursor: pointer;
-        }
-        .panel {
-            max-width: 800px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 10px; display: none;
-        }
-        .form-section { margin-bottom: 30px; }
-        ul { list-style: none; padding: 0; }
-        li { background: #f9f9f9; margin: 10px 0; padding: 10px; border-radius: 5px; position: relative; }
-        .delete-btn {
-            position: absolute; top: 10px; right: 10px; background: red; border: none; color: white; padding: 5px 10px;
-            border-radius: 3px; cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurt İletişim - Cep Telefonu Tamiri</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+    }
+    .whatsapp {
+      background-color: #25D366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      text-decoration: none;
+      display: block;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container" id="loginBox">
-        <h2>Yönetici Girişi</h2>
-        <input type="text" id="username" placeholder="Kullanıcı Adı">
-        <input type="password" id="password" placeholder="Şifre">
-        <button onclick="login()">Giriş Yap</button>
-        <p id="error" style="color: red; text-align:center; display:none;">Hatalı giriş. Lütfen tekrar deneyin.</p>
-    </div>
 
-    <div class="panel" id="adminPanel">
-        <h3>Yönetici Paneli</h3>
+  <header>
+    <h1>Kurt İletişim</h1>
+    <p>Profesyonel Cep Telefonu Tamiri</p>
+  </header>
 
-        <div class="form-section">
-            <h4>Yeni Müşteri Yorumu Ekle</h4>
-            <textarea id="yorumInput" placeholder="Yorum girin..."></textarea>
-            <button onclick="ekleYorum()">Yorumu Kaydet</button>
-            <ul id="yorumListesi"></ul>
-        </div>
+  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
 
-        <div class="form-section">
-            <h4>Yeni Hizmet Ekle</h4>
-            <input type="text" id="hizmetBaslik" placeholder="Hizmet Başlığı">
-            <textarea id="hizmetAciklama" placeholder="Hizmet Açıklaması"></textarea>
-            <button onclick="ekleHizmet()">Hizmeti Kaydet</button>
-            <ul id="hizmetListesi"></ul>
-        </div>
-    </div>
+  <section>
+    <h2>Hoş Geldiniz!</h2>
+    <p>Kurt İletişim olarak iPhone, Samsung ve diğer akıllı telefonların tamir işlemlerini hızlı ve güvenilir şekilde gerçekleştiriyoruz.</p>
+  </section>
 
-    <script>
-        function login() {
-            var user = document.getElementById('username').value;
-            var pass = document.getElementById('password').value;
-            if(user === "kurtgsm" && pass === "taner123@") {
-                document.getElementById('loginBox').style.display = 'none';
-                document.getElementById('adminPanel').style.display = 'block';
-            } else {
-                document.getElementById('error').style.display = 'block';
-            }
-        }
+  <a class="whatsapp" href="https://wa.me/905074995849" target="_blank">WhatsApp ile İletişime Geç</a>
 
-        function ekleYorum() {
-            var yorum = document.getElementById("yorumInput").value;
-            if(yorum.trim() !== "") {
-                var li = document.createElement("li");
-                li.innerHTML = yorum + '<button class="delete-btn" onclick="this.parentElement.remove()">Sil</button>';
-                document.getElementById("yorumListesi").appendChild(li);
-                document.getElementById("yorumInput").value = "";
-            }
-        }
-
-        function ekleHizmet() {
-            var baslik = document.getElementById("hizmetBaslik").value;
-            var aciklama = document.getElementById("hizmetAciklama").value;
-            if(baslik.trim() !== "" && aciklama.trim() !== "") {
-                var li = document.createElement("li");
-                li.innerHTML = "<strong>" + baslik + ":</strong> " + aciklama + '<button class="delete-btn" onclick="this.parentElement.remove()">Sil</button>';
-                document.getElementById("hizmetListesi").appendChild(li);
-                document.getElementById("hizmetBaslik").value = "";
-                document.getElementById("hizmetAciklama").value = "";
-            }
-        }
-    </script>
 </body>
 </html>
