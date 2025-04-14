@@ -1,145 +1,222 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KURT İLETİŞİM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kurt İletişim</title>
   <style>
     body {
-      font-family: 'Rubik', sans-serif;
       margin: 0;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f7f7f7;
       color: #333;
     }
+
     header {
-      background: #222;
+      background: #1c1c1c;
       color: white;
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
     }
-    header img {
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
       height: 50px;
-      vertical-align: middle;
+      margin-right: 15px;
     }
-    h1 {
-      font-size: 28px;
-      margin: 10px 0 5px;
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .slider {
+
+    .slider img {
+      width: 100%;
+      border-radius: 20px;
+      margin: 20px 0;
+    }
+
+    .hizmetler {
+      padding: 30px;
+    }
+
+    .kategori-scroll {
       display: flex;
       overflow-x: auto;
-      gap: 15px;
-      padding: 20px;
-      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 20px 0;
     }
-    .slider::-webkit-scrollbar {
-      display: none;
-    }
-    .category {
-      flex: 0 0 auto;
-      width: 180px;
+
+    .kategori {
       background: white;
       border-radius: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       padding: 15px;
       text-align: center;
-      scroll-snap-align: start;
+      min-width: 140px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .category img {
+
+    .kategori img {
       width: 60px;
       height: 60px;
-      object-fit: contain;
-      margin-bottom: 10px;
     }
-    .brands {
+
+    .markalar {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 20px;
-      padding: 20px;
+      margin-top: 20px;
     }
-    .brands img {
+
+    .markalar img {
       height: 40px;
-      filter: grayscale(1);
-      transition: 0.3s;
     }
-    .brands img:hover {
-      filter: grayscale(0);
+
+    .iletisim {
+      padding: 40px 30px;
+      background: #efefef;
+      text-align: center;
     }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
+
+    .wp-button {
+      display: inline-block;
+      background: #25d366;
       color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
+      padding: 12px 25px;
+      border-radius: 30px;
       text-decoration: none;
-      font-size: 16px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      font-weight: bold;
     }
-    .footer {
-      background: #222;
+
+    footer {
+      background: #1c1c1c;
       color: white;
       text-align: center;
       padding: 15px;
     }
-    .footer a {
+
+    .admin-giris {
+      padding: 30px;
+      text-align: center;
+    }
+
+    #panel {
+      display: none;
+      padding: 30px;
+      text-align: center;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #222;
       color: white;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .instagram {
+      margin-top: 15px;
+    }
+
+    .instagram a {
       text-decoration: none;
+      color: #d62976;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Wolf_icon.svg/512px-Wolf_icon.svg.png" alt="Logo" />
-    <h1>KURT İLETİŞİM</h1>
-    <p>Profesyonel Telefon Tamiri</p>
+    <div class="logo">
+      <img src="logo.png" alt="Kurt Logo">
+      <h1>Kurt İletişim</h1>
+    </div>
+    <nav>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#iletisim">İletişim</a>
+      <a href="#admin">Yönetici</a>
+    </nav>
   </header>
 
   <section class="slider">
-    <div class="category">
-      <img src="https://cdn-icons-png.flaticon.com/512/850/850960.png" alt="Batarya">
-      <h3>Batarya Değişimi</h3>
-      <p>Zayıflamış & şişmiş bataryalar değiştirilir</p>
+    <img src="slider1.jpg" alt="Tamir Hizmeti">
+  </section>
+
+  <section id="hizmetler" class="hizmetler">
+    <h2>TAMİR HİZMETLERİ</h2>
+    <div class="kategori-scroll">
+      <div class="kategori">
+        <img src="icons/batarya.png" alt="Batarya">
+        <p>Zayıflamış ve şişmiş bataryaları değiştiriyoruz</p>
+      </div>
+      <div class="kategori">
+        <img src="icons/ekran.png" alt="Ekran">
+        <p>Kırık ekran değişimi</p>
+      </div>
+      <div class="kategori">
+        <img src="icons/arka-cam.png" alt="Arka Cam">
+        <p>Arka cam değişimi</p>
+      </div>
     </div>
-    <div class="category">
-      <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Ekran">
-      <h3>Ekran Değişimi</h3>
-      <p>Kırık, çatlak ekran değişimi</p>
-    </div>
-    <div class="category">
-      <img src="https://cdn-icons-png.flaticon.com/512/747/747569.png" alt="Arka Cam">
-      <h3>Arka Cam Değişimi</h3>
-      <p>iPhone & Android modeller için</p>
+    <div class="markalar">
+      <img src="icons/apple.png" alt="Apple">
+      <img src="icons/samsung.png" alt="Samsung">
+      <img src="icons/xiaomi.png" alt="Xiaomi">
     </div>
   </section>
 
-  <section class="brands">
-    <img src="https://cdn.worldvectorlogo.com/logos/apple.svg" alt="Apple">
-    <img src="https://cdn.worldvectorlogo.com/logos/samsung-4.svg" alt="Samsung">
-    <img src="https://cdn.worldvectorlogo.com/logos/huawei-2.svg" alt="Huawei">
-    <img src="https://cdn.worldvectorlogo.com/logos/xiaomi.svg" alt="Xiaomi">
-    <img src="https://cdn.worldvectorlogo.com/logos/oppo-logo.svg" alt="Oppo">
+  <section id="iletisim" class="iletisim">
+    <h2>BİZE ULAŞIN</h2>
+    <a class="wp-button" href="https://wa.me/905074995849" target="_blank">WhatsApp'tan Yaz</a>
+    <div class="instagram">
+      <p>Instagram: <a href="https://instagram.com/kurtiletişim41" target="_blank">@kurtiletişim41</a></p>
+    </div>
   </section>
 
-  <a class="whatsapp" href="https://wa.me/905074995849" target="_blank">
-    <i class="fab fa-whatsapp"></i> Fiyat Sor
-  </a>
+  <section id="admin" class="admin-giris">
+    <h2>Yönetici Girişi</h2>
+    <input type="password" id="sifre" placeholder="Şifre girin">
+    <br>
+    <button onclick="kontrolEt()">Giriş Yap</button>
+  </section>
 
-  <div class="footer">
-    <p>&copy; 2025 Kurt İletişim | 
-      <a href="https://www.instagram.com/kurtiletişim41" target="_blank">
-        <i class="fab fa-instagram"></i> @kurtiletişim41
-      </a>
-    </p>
-  </div>
+  <section id="panel">
+    <h2>Yönetici Paneli</h2>
+    <p>Siteyi buradan düzenleyebilirsiniz. (Daha sonra geliştirilecek)</p>
+    <!-- Gelecek özellikler: Resim ekleme, içerik değiştirme, fiyat ekleme vs -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kurt İletişim</p>
+  </footer>
+
+  <script>
+    function kontrolEt() {
+      const sifre = document.getElementById("sifre").value;
+      if (sifre === "1230") {
+        document.getElementById("admin").style.display = "none";
+        document.getElementById("panel").style.display = "block";
+      } else {
+        alert("Şifre yanlış!");
+      }
+    }
+  </script>
 
 </body>
 </html>
