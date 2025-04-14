@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KURT İLETİŞİM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+        nav {
+            background-color: #444;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        nav a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        .container {
+            padding: 20px;
+        }
+        .service {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        .brands {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .brands img {
+            width: 40px;
+            height: auto;
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .admin-panel {
+            display: none;
+            padding: 20px;
+            background: #fff;
+        }
+        .admin-form input[type="file"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    KURT İLETİŞİM
+</header>
+
+<nav>
+    <a href="#ekran">Ekran Değişimi</a>
+    <a href="#batarya">Batarya Değişimi</a>
+    <a href="#arka">Arka Cam Değişimi</a>
+</nav>
+
+<div class="container">
+    <div class="service" id="ekran">
+        <h2>Ekran Değişimi</h2>
+        <p>iPhone ve Android modeller için profesyonel ekran değişimi</p>
+        <div class="brands">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Samsung_wordmark.svg" alt="Samsung">
+        </div>
+    </div>
+
+    <div class="service" id="batarya">
+        <h2>Batarya Değişimi</h2>
+        <p>Zayıflamış ve şişmiş bataryaları değiştiriyoruz</p>
+        <div class="brands">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Xiaomi_logo_%282021-%29.svg" alt="Xiaomi">
+        </div>
+    </div>
+
+    <div class="service" id="arka">
+        <h2>Arka Cam Değişimi</h2>
+        <p>iPhone ve Android telefonlar için orijinal cam değişimi</p>
+        <div class="brands">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Samsung_wordmark.svg" alt="Samsung">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Huawei_wordmark.svg" alt="Huawei">
+        </div>
+    </div>
+</div>
+
+<!-- WhatsApp Button -->
+<a class="whatsapp-button" href="https://wa.me/905074995849" target="_blank">WhatsApp'tan Yaz</a>
+
+<!-- Admin Panel -->
+<div class="admin-panel" id="adminPanel">
+    <h2>Yönetici Paneli</h2>
+    <form class="admin-form">
+        <label>Resim Yükle:</label>
+        <input type="file" accept="image/*"><br>
+        <label>Kategori Başlığı:</label>
+        <input type="text" placeholder="Kategori Adı"><br>
+        <button type="submit">Ekle</button>
+    </form>
+</div>
+
+<!-- Admin Giriş -->
+<script>
+    const password = prompt("Yönetici Girişi - Şifreyi girin:");
+    if (password === "1230") {
+        document.getElementById("adminPanel").style.display = "block";
+    }
+</script>
+
+<footer>
+    <p>Bizi Instagram'da Takip Et: <a href="https://instagram.com/kurtiletişim41" style="color:#fff;">@kurtiletişim41</a></p>
+</footer>
+
+</body>
+</html>
